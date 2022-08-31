@@ -25,7 +25,7 @@ Student.prototype.addMark = function (mark) {
 };
 firstStudent.addMark(5);
 secondStudent.addMark(4);
-console.log(secondStudent);
+
 
 
 Student.prototype.addMarks = function (...marks) {
@@ -34,16 +34,15 @@ Student.prototype.addMarks = function (...marks) {
 };
 thirdStudent.addMarks(1, 2, 3, 4, 5);
 firstStudent.addMarks(5, 5, 5);
-console.log(firstStudent);
 
 
-Student.prototype.getAverage = function (...array) {
-  this.average = (array.reduce((acc, item) => acc += item, 0)) / array.length;
+
+Student.prototype.getAverage = function (marks) {
+  return this.average = (this.marks.reduce((acc, item) => acc += item, 0)) / this.marks.length;
 };
-//console.log(marks)
-firstStudent.getAverage(this.marks);
-console.log(firstStudent.marks);
-console.log(firstStudent);
+
+firstStudent.getAverage();
+
 
 
 Student.prototype.exclude = function (reason) {
